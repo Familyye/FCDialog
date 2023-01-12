@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+</head>
+
+<body>
+
+    <meta charset="UTF-8">
+    <style type="text/css">
+        a:link {
+            color: #42b983;
+            font-weight: bold;
+        }
+
+        a:visited {
+            color: blue;
+            font-weight: bold;
+        }
+
+        a:hover {
+            color: red;
+            font-weight: bold;
+        }
+
+        a:active {
+            color: black;
+            font-weight: bold;
+        }
+    </style>
+
+    <script>
+        var imgs = document.querySelectorAll('img');
+
+        //offsetTop是元素与offsetParent的距离，循环获取直到页面顶部
+        function getTop(e) {
+            var T = e.offsetTop;
+            while (e = e.offsetParent) {
+                T = e.offsetTop;
+            }
+            return T;
+        }
+
+        function lazyLoad(imgs) {
+            var H = document.documentElement.clientHeight; //获取可视区域高度
+            var S = document.documentElement.scrollTop || document.body.scrollTop;
+            for (var i = 0; i < imgs.length; i) {
+                if (H S > getTop(imgs[i])) {
+                    imgs[i].src = imgs[i].getAttribute('data-src');
+                }
+            }
+        }
+
+        window.onload = window.onscroll = function() { //onscroll()在滚动条滚动的时候触发
+            lazyLoad(imgs);
+        }
+    </script>
+
+
+    <style>
+        p {
+            line-height: 30px;
+        }
+
+        .back {
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            background-color: #abcdef;
+            color: #00f;
+            text-align: center;
+            position: fixed;
+            right: 30px;
+            bottom: 30px;
+            border-radius: 30% 30% 30% 30%;
+            font-size: 30px;
+            font-weight: bold;
+            display: none;
+        }
+    </style>
+
+    <div class="top"></div>
+    <main>
+        <section style="padding-left: 10%; padding-top: 3%; padding-bottom: 5%; padding-right: 10%;">
+            <article>
+                <a href="https://nnnb.lanzoum.com/b021r5q9g"><img src="https://gitee.com/MIKIFC/FuChuan/raw/master/FCTC/littleWhiteDuck.png"></a>
+                <p></p><b>点击图片即可查看更新<!--/</b-->
+                    <p>当前模块版本:2.2.3</p>
+                    <p>目前支持的应用:44</p>
+                    <p>已弃坑 随缘更新...</p>
+                    <p>以下应用理论是最新版本适用</p>
+                    <p>图凌 v4.0.8</p>
+                    <p>幕布 v2.28.4</p>
+                    <p>剪映 v8.7.0</p>
+                    <p>趣映 v1.4.7</p>
+                    <p>冰箱 v3.21.1 C</p>
+                    <p>云记 v2.4.9.1</p>
+                    <p>爱剪辑 v70.3</p>
+                    <p>次元壁纸 v2.7.6</p>
+                    <p>简单水印 v3.6.9</p>
+                    <p>享做笔记 v5.5.2.5874</p>
+                    <p>番茄小说 v5.4.9.32</p>
+                    <p>七猫小说 v7.6</p>
+                    <p>番茄畅听 v4.2.0.32</p>
+                    <p>绿去广告 v3.0.0</p>
+                    <p>神奇脑波 v6.6.2</p>
+                    <p>小熊录屏 v2.4.6.5</p>
+                    <p>河马影视 v5.0.0</p>
+                    <p>野马视频 v5.0.1</p>
+                    <p>追风视频 v2.3.0</p>
+                    <p>火焰视频 v2.3.0</p>
+                    <p>星星视频 v2.3.0</p>
+                    <p>星辰视频 v2.2.0</p>
+                    <p>星空视频 v2.2.0</p>
+                    <p>大海影视 v2.2.0</p>
+                    <p>轻颜相机 v4.6.0</p>
+                    <p>一甜相机 v3.0.3.30</p>
+                    <p>嘀嗒清单 v6.3.2.0</p>
+                    <p>VMOSPro v2.9.1</p>
+                    <p>讯飞语记 v7.1.1375</p>
+                    <p>酷我音乐 v10.1.2.6</p>
+                    <p>腾讯微云 v6.9.80</p>
+                    <p>万能小组件 v2.1.0</p>
+                    <p>有道云笔记 v7.4.4</p>
+                    <p>小组件盒子 v1.8.8</p>
+                    <p>宇宙工具箱 v1.5.0</p>
+                    <p>甲壳虫ADB v1.2.8</p>
+                    <p>迅游加速器 v5.4.3.1</p>
+                    <p>WiFi万能钥匙 v4.8.83</p>
+                    <p>ES文件浏览器 v 4.2.9.12</p>
+                    <p>Fake Location v1.3.1.6</p>
+                    <p>XRecorder录屏 v2.2.1.1</p>
+                    <p>Xmind思维导图 v22.08.157</p>
+                    <p>表格Excel手机版 v6.5.0</p>
+                    <p>Android开发工具箱 v2.9.1</p>
+                    <strong>Copyright ©&nbsp;2022 Siyu All
+                        reserved.</strong>
+                    <p></p>
+                </b>
+            </article>
+        </section>
+    </main>
+</body>
+
+</html>
